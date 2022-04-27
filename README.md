@@ -52,6 +52,12 @@ String or Array of aliases for fqdn
 
 - *Default*: $::hostname
 
+fqdn_ip
+-------
+Alternate ip address to use when exporting hosts entry of the machine's fqdn
+
+- *default*: $::ipaddress
+
 localhost_aliases
 -----------------
 String or Array of aliases for localhost
