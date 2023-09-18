@@ -24,7 +24,6 @@ class hosts (
   Hash $host_entries                            = {},
 ) {
 
-
   if $enable_ipv4_localhost == true {
     $localhost_ensure     = 'present'
     $localhost_ip         = '127.0.0.1'
@@ -73,7 +72,7 @@ class hosts (
     ip           => $localhost6_ip,
   }
 
-  if $facts[networking][fqdn] == true {
+  if $use_fqdn == true {
     @@host { $facts[networking][fqdn]:
       ensure       => $fqdn_ensure,
       host_aliases => $my_fqdn_host_aliases,
