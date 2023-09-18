@@ -9,7 +9,7 @@ class hosts (
   Boolean $enable_fqdn_entry                   = true,
   Boolean $use_fqdn                            = true,
   Variant[Array,String] $fqdn_host_aliases     = $facts[networking][hostname],
-  String $fqdn_ip                              = $facts[networking][ipaddress],
+  String $fqdn_ip                              = $facts[networking][ip],
   Variant[Array,String] $localhost_aliases     = [
       'localhost',
       'localhost4',
